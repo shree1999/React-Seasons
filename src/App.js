@@ -1,5 +1,6 @@
 import React from "react";
 import Display from "./Display";
+import Spinner from "./Spinner";
 
 import "./App.css";
 
@@ -32,7 +33,11 @@ class App extends React.Component {
       );
     }
 
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Spinner message="Fetching Your Location" />
+      </div>
+    );
   }
 
   render() {
